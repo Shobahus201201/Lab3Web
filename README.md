@@ -30,7 +30,7 @@ Kemudian tambahkan kode untuk membuat description list setelah deklarasi unorder
 
 ![Foto](Foto/foto6.png)
 
-![Foto](Foto/foto%207.png))
+![Foto](Foto/foto%207.png)
 
 
 
@@ -87,7 +87,7 @@ Agar tampilan form lebih menarik, bisa ditambahkan CSS seperti berikut.
 1.HTML
 ![Foto](Foto/foto20.png)
   CSS
-  
+
 ![Foto](Foto/foto22.png)
 OUTPUT
 
