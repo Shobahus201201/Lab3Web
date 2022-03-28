@@ -4,13 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form dropdown & Listbox with multiple selection</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    
-  </head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+      h1{
+          text-align: center;;
+      }
+      body{
+            margin: 2% auto;
+            width: 40%;
+            font-family: arial;
+            font-size: 17px;
+            line-height: 25px;
+          }
+      .logo{
+	          width: 110px;
+          }
+      form fieldset{
+          border-style: solid;
+          border-color: rgb(0, 0, 0);   
+          padding: 25px;
+          background-color: rgb(255, 255, 255);
+          background-repeat: no-repeat;
+          background-size: auto;
+          position: absolute; 
+          right: 390px;
+          width: 35%; 
+      }
+      form p > label {
+          display: inline-block;
+          width: 100px;
+      }
+      form input[type="text"], 
+      form textarea {
+          border: 1px solid #197a43;
+      }
+      form input[type="submit"] {
+          border: 1px solid #197a43;
+          background-color: #197a43;
+          color: #ffffff;
+          font-weight: bold;
+          padding: 5px 15px;
+      }
+  </style>
+   </head>
   <body>
     <div class="header">
-      <div>
-        <img class="logo" src="Foto/Logo_UPB.png">
+       
       </div>
       <div>
         <h1>Form Mahasiswa UPB</h1>
@@ -18,38 +57,52 @@
     </div>
     <form action="proses.php" method="post">
       <fieldset>
-        <legend>Data Mahasiswa</legend>
-        <label for="nama">Nama</label>
-        <input type="text" id="nama" name="nama">
-
-        <label for="nim">NIM</label>
-        <input type="text" id="nim" name="nim">
-
-        <label for="jurusan">JK</label>
-        <input id="jk_l" type="radio" name="kelamin" value="L" />
-        <label for="jk_l">Laki-laki</label>
-        <input id="jk_p" type="radio" name="kelamin" value="P" />
-        <label for="jk_p">Perempuan</label>
-
-        <br><br>
-        <label for="jurusan">Jurusan(Dropdown)</label>
-        <select name="jurusan">
-          <option value="" selected="selected">--Pilih Jurusan--</option>
+        <legend><img class="logo" src="Foto/Logo_UPB.png" width="80" title="Logo Univeritas Pelita Bangsa"></legend>
+        <p>
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama">
+      </p>
+      <p>
+          <label for="nim">NIM:</label>
+          <input type="text" id="nim" name="nim">
+      </p>
+      <p>
+          <label for="kelas">Kelas:</label>
+          <input type="text" id="kelas" name="kelas">
+      </p>
+      <p>
+        
+        <label for="Prodi">Prodi :</label>
+        <select name="Prodi">
+          <option value="" selected="selected">--Pilih Prodi--</option>
           <option value="ti">Teknik Informatika</option>
           <option value="ts">Teknik Sipil</option>
           <option value="mj">Manajemen</option>
-        </select><br>
+        </select>
+      <p><br>
 
-        <label for="jurusan2">Jurusan (multiple selection)</label>
-        <select multiple name="drawfs" id="jurusan">
-          <option value="ti">Teknik Informatika</option>
-          <option value="ts">Teknik Sipil</option>
-          <option value="mj">Manajemen</option>
-        </select><br>
-
+        <label for="fakultas">Fakultas :</label>
+        <select name="drawfs" id="Fakultas">
+            <option value='' selected>Pilih Fakultas</option>
+            <option value='TI'>Teknik Industri</option>
+            <option value='FEB'>Ekonomi dan Bisnis</option>
+            <option value='FIPHUM'>Ilmu Pendidikan dan Humaniora</option>
+            <option value='FAI'>Agama Islam</option>
+            <option value='FT'selected='selected'>Teknik</option>
+        </select>
+    </p>
+    <p><br>
+       <label>Jenis Kelamin:</label>
+       <input id="jk_l" type="radio" name="kelamin" value="L" /><label
+for="jk_l">Laki-laki</label>
+      <input id="jk_p" type="radio" name="kelamin" value="P" /><label
+for="jk_p">Perempuan</label>
+</p>
+<p>
         <label for="alamat">Alamat</label>
         <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
         <p>
+       
           <input type="submit" value="Daftar">
         </p>
       </fieldset>
