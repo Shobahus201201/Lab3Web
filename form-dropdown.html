@@ -4,21 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form dropdown & Listbox with multiple selection</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <style>
       h1{
           text-align: center;;
       }
-      body{
-            margin: 2% auto;
-            width: 40%;
-            font-family: arial;
-            font-size: 17px;
-            line-height: 25px;
-          }
-      .logo{
-	          width: 110px;
-          }
       form fieldset{
           border-style: solid;
           border-color: rgb(0, 0, 0);   
@@ -71,7 +61,6 @@
           <input type="text" id="kelas" name="kelas">
       </p>
       <p>
-        
         <label for="Prodi">Prodi :</label>
         <select name="Prodi">
           <option value="" selected="selected">--Pilih Prodi--</option>
@@ -79,19 +68,15 @@
           <option value="ts">Teknik Sipil</option>
           <option value="mj">Manajemen</option>
         </select>
-      <p><br>
-
-        <label for="fakultas">Fakultas :</label>
-        <select name="drawfs" id="Fakultas">
-            <option value='' selected>Pilih Fakultas</option>
-            <option value='TI'>Teknik Industri</option>
-            <option value='FEB'>Ekonomi dan Bisnis</option>
-            <option value='FIPHUM'>Ilmu Pendidikan dan Humaniora</option>
-            <option value='FAI'>Agama Islam</option>
-            <option value='FT'selected='selected'>Teknik</option>
+      <p>
+        <label for="jurusan">Fakultas :</label>
+        <select multiple name="drawfs" id="jurusan">
+          <option value="ti">Teknik Informatika</option>
+          <option value="ts">Teknik Sipil</option>
+          <option value="mj">Manajemen</option>
         </select>
     </p>
-    <p><br>
+    <p>
        <label>Jenis Kelamin:</label>
        <input id="jk_l" type="radio" name="kelamin" value="L" /><label
 for="jk_l">Laki-laki</label>
